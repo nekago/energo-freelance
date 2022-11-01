@@ -1,0 +1,65 @@
+@import "colors";
+@import "gotham-pro-font";
+
+.title {
+  font-family: $gotham_pro;
+
+  &.title-one {
+    color: $blue;
+    font-weight: 700;
+    font-size: 48px;
+    text-transform: uppercase;
+    text-align: center;
+
+
+    @media screen and (max-width: 710px) {
+      font-size: 24px;
+    }
+
+
+    &.section {
+      &:before, &:after {
+        content: url("/../../assets/img/section-title.svg");
+        display: inline-block;
+        transform: translateY(5px);
+
+
+        @media screen and (max-width: 710px) {
+          content: url("/../../assets/img/section-title-mob.svg");
+        }
+
+      }
+
+      &:before {
+        margin-right: 40px;
+
+
+        @media screen and (max-width: 420px) {
+          margin-right: 10px;
+        }
+      }
+
+      &:after {
+        margin-left: 40px;
+
+        @media screen and (max-width: 420px) {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+
+  &.title-five {
+    max-width: 860px;
+    padding: 60px 0 40px;
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27.5px;
+    color: $white;
+    text-align: center;
+  }
+
+
+}

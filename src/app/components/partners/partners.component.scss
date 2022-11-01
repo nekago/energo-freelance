@@ -1,0 +1,36 @@
+@import 'src/assets/css/settings';
+.partners {
+  padding-block: 100px;
+  background-color: $dark-blue;
+
+  &__items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    @media  screen and (max-width: 949px) {
+      flex-wrap: wrap;
+    }
+
+
+    @media  screen and (max-width: 715px) {
+      justify-content: center;
+    }
+  }
+
+  &__item{
+    width: 200px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $white;
+    border-radius: 15px;
+    margin: 15px;
+
+    &-img{
+
+    }
+  }
+
+}
