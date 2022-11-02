@@ -3,4 +3,10 @@
   font-family: "Gotham Pro";
 }
 
+@font-face {
+  src: url("/src/assets/fonts/GothamPro/GothamPro-Light.ttf");
+  font-family: "Gotham Pro Light"
+}
+
 $gotham_pro: "Gotham Pro", sans-serif;
+$gotham_pro_light: "Gotham Pro Light", sans-serif;

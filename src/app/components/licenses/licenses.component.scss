@@ -1,0 +1,23 @@
+@import 'src/assets/css/settings';
+
+.licenses {
+  padding-block: 100px;
+  background-image: linear-gradient(360deg, #00111F 0%, rgba(0, 17, 31, 0) 100%), url("../../../assets/img/licenses-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  &__inner {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 60px 40px;
+  }
+  &__item {
+    &-img {
+      border-radius: 15px;
+
+    }
+    &:hover {
+      opacity: 50%;
+    }
+  }
+}

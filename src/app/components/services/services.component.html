@@ -9,22 +9,30 @@
           <div class="services__info-inner">
             <div class="services__info-text">
               <img src="assets/img/services-accept.svg" alt="accept">
-              <p>Обв'язка та підключення свердловин</p>
+              <span>Обв'язка та підключення свердловин</span>
             </div>
             <div class="services__info-text">
               <img src="assets/img/services-accept.svg" alt="accept">
-              <p>Будівництво магістральних газопроводів,
-                газопроводів-шлейфів свердловин</p>
+              <span>Будівництво магістральних газопроводів,<br>
+                газопроводів-шлейфів свердловин</span>
             </div>
             <div class="services__info-text">
               <img src="assets/img/services-accept.svg" alt="accept">
-              <p>Облаштування родовищ (реконструкція та технічного
-                переоснащення об’єктів)</p>
+              <span>Облаштування родовищ (реконструкція та технічного
+                переоснащення об’єктів)</span>
             </div>
           </div>
           <img class="services__info-img" src="assets/img/services/services-1.png" alt="services-1">
         </div>
-        <div class="services__slider"></div>
+        <div class="services__slider">
+          <owl-carousel-o [options]="customOptions">
+            <ng-template carouselSlide *ngFor="let slide of slidesFirst">
+              <a data-fancybox="slidesFirst" [href]="slide.img">
+                <img [src]="slide.img" alt="slide">
+              </a>
+            </ng-template>
+          </owl-carousel-o>
+        </div>
       </div>
 
       <div class="services__item">
@@ -33,20 +41,28 @@
           <div class="services__info-inner">
             <div class="services__info-text">
               <img src="assets/img/services-accept.svg" alt="accept">
-              <p>Комплексне будівництво та реконструкція АЗС та АГЗС</p>
+              <span>Комплексне будівництво та реконструкція АЗС та АГЗС</span>
             </div>
             <div class="services__info-text">
               <img src="assets/img/services-accept.svg" alt="accept">
-              <p>Транспортне будівництво</p>
+              <span>Транспортне будівництво</span>
             </div>
             <div class="services__info-text">
               <img src="assets/img/services-accept.svg" alt="accept">
-              <p>Будівництво доріг та благоустрій території</p>
+              <span>Будівництво доріг та благоустрій території</span>
             </div>
           </div>
           <img class="services__info-img" src="assets/img/services/services-2.png" alt="services-2">
         </div>
-        <div class="services__slider"></div>
+        <div class="services__slider">
+          <owl-carousel-o [options]="customOptions">
+            <ng-template carouselSlide *ngFor="let slide of slidesSecond">
+              <a data-fancybox="slidesSecond" [href]="slide.img">
+                <img [src]="slide.img" alt="slide">
+              </a>
+            </ng-template>
+          </owl-carousel-o>
+        </div>
       </div>
 
       <div class="services__item">
@@ -56,17 +72,25 @@
           <div class="services__info-inner">
             <div class="services__info-text">
               <img src="assets/img/services-accept.svg" alt="accept">
-              <p>Ремонт підземного та підводного ізоляційного покриття
-                магістральних нафто-газопроводів</p>
+              <span>Ремонт підземного та підводного ізоляційного покриття
+                магістральних нафто-газопроводів</span>
             </div>
             <div class="services__info-text">
               <img src="assets/img/services-accept.svg" alt="accept">
-              <p>Ремонт антікорозійного та ізоляційного покриття</p>
+              <span>Ремонт антікорозійного та ізоляційного покриття</span>
             </div>
           </div>
           <img class="services__info-img" src="assets/img/services/services-3.png" alt="services-3">
         </div>
-        <div class="services__slider"></div>
+        <div class="services__slider">
+          <owl-carousel-o [options]="customOptions">
+            <ng-template carouselSlide *ngFor="let slide of slidesThird">
+              <a data-fancybox="slidesThird" [href]="slide.img">
+                <img [src]="slide.img" alt="slide">
+              </a>
+            </ng-template>
+          </owl-carousel-o>
+        </div>
       </div>
     </div>
   </div>

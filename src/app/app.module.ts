@@ -10,6 +10,9 @@ import { LicensesComponent } from './components/licenses/licenses.component';
 import { PartnersComponent } from './components/partners/partners.component';
 import { ReviewsComponent } from './components/reviews/reviews.component';
 import { ServicesComponent } from './components/services/services.component';
+import {CarouselModule} from "ngx-owl-carousel-o";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { ServicesComponent } from './components/services/services.component';
     ServicesComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    CarouselModule,
+    BrowserAnimationsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,116 @@
+@import 'src/assets/css/settings';
+
+.services {
+  padding-block: 100px;
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.9) 100%), url("../../../assets/img/services-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__item {
+    &-title {
+      max-width: 860px;
+      padding: 60px 0 40px;
+      margin: 0 auto;
+      text-align: center;
+      font-weight: 400;
+      font-size: 24px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+    }
+
+    &-text {
+      max-width: 620px;
+      display: flex;
+      padding: 18px 30px;
+      background-color: $white;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+
+    &-text > img {
+      margin-right: 15px;
+    }
+
+    &-img {
+      border-radius: 15px;
+
+    }
+  }
+
+  &__slider {
+    margin-top: 60px;
+    padding: 0 32px;
+
+    img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  }
+}
+
+::ng-deep .owl-carousel {
+  .owl-dots {
+    margin-top: 20px;
+    .owl-dot {
+      span {
+        background: $dark_blue;
+      }
+
+      &.active {
+        span {
+          background: $yellow;
+        }
+      }
+    }
+  }
+
+  .owl-nav {
+    margin: 0!important;
+    padding: 0!important;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    & > * {
+      margin: 0!important;
+      padding: 0!important;
+      border: none!important;
+      background: none!important;
+      width: 32px!important;
+      height: 32px!important;
+      position: absolute!important;
+      transform: translateY(-100%)!important;
+      background: $blue!important;
+      border-radius: 50%!important;
+      font-size: 16px!important;
+      display: flex!important;
+      align-items: center!important;
+      justify-content: center;
+
+    }
+    .owl-prev {
+      left: -64px!important;
+    }
+
+    .owl-next {
+      right: -64px!important;
+    }
+  }
+}
+
+
+
+
