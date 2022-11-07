@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import {Component} from '@angular/core';
 import {OwlOptions} from "ngx-owl-carousel-o";
 
 
@@ -8,7 +8,6 @@ import {OwlOptions} from "ngx-owl-carousel-o";
   styleUrls: ['./services.component.scss']
 })
 export class ServicesComponent {
-
 
 
   slidesFirst = [
@@ -56,13 +55,28 @@ export class ServicesComponent {
   ]
 
   customOptions: OwlOptions = {
-    items: 3,
     dots: true,
     nav: true,
     loop: false,
     margin: 20,
-    navText: ['<i class="fa-regular fa-angle-left"></i>', '<i class="fa-regular fa-angle-right"></i>']
+    navText: ['<i class="fa-regular fa-angle-left"></i>', '<i class="fa-regular fa-angle-right"></i>'],
+    responsive: {
+      0: {
+        items: 1,
+        nav: false
+      },
+      620: {
+        items: 2,
+        nav: false
+      },
+      960: {
+        items: 3
+      },
+    }
+  }
   }
 
 
-}
+
+
+

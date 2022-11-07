@@ -1,17 +1,38 @@
-<section class="reviews">
+<section id="reviews" class="reviews">
   <h1 class="title title-one section">відгуки клієнтів</h1>
   <div class="container">
-    <div class="reviews__inner">
-      <div class="reviews__list">
-        <div class="reviews__item" [class.isSelect]="item.isSelect" *ngFor="let item of imageList; let i = index" (click)="changeReviewImage(i)">
+    <ng-template [ngIf]="!isMobile">
+      <div class="reviews__inner">
+        <div class="reviews__list">
+          <div class="reviews__item" [class.isSelect]="item.isSelect" *ngFor="let item of imageList; let i = index" (click)="changeReviewImage(i)">
+            <i class="fa-solid fa-user"></i>
+            <div>
+              <p class="reviews__title">{{item.name.title}}</p>
+              <p class="reviews__subtitle">{{item.name.subtitle}}</p>
+            </div>
+          </div>
+        </div>
+        <img class="reviews__image" [src]="currentImg.src" [alt]="currentImg.name.title">
+      </div>
+    </ng-template>
+
+    <ng-template [ngIf]="isMobile">
+      <owl-carousel-o [options]="customOptions" >
+      <ng-template carouselSlide *ngFor="let item of imageList">
+        <img class="reviews__image" [src]="item.src" [alt]="currentImg.name.title">
+        <div class="reviews__item">
           <i class="fa-solid fa-user"></i>
           <div>
             <p class="reviews__title">{{item.name.title}}</p>
             <p class="reviews__subtitle">{{item.name.subtitle}}</p>
           </div>
+
         </div>
-      </div>
-      <img class="reviews__image" [src]="currentImg.src" [alt]="currentImg.name.title">
-    </div>
+
+      </ng-template>
+      </owl-carousel-o>
+    </ng-template>
   </div>
+
+
 </section>

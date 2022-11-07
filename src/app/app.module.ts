@@ -13,6 +13,7 @@ import { ServicesComponent } from './components/services/services.component';
 import {CarouselModule} from "ngx-owl-carousel-o";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
+import { MenuComponent } from './components/header/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
     LicensesComponent,
     PartnersComponent,
     ReviewsComponent,
-    ServicesComponent
+    ServicesComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

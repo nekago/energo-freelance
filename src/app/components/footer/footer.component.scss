@@ -10,15 +10,33 @@
     display: flex;
     justify-content: space-between;
     align-items: start;
+
+    @media  screen and (max-width: 960px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
   &__logo {
+    max-width: 200px;
+    width: 100%;
     margin-right: 65px;
+    @media  screen and (max-width: 960px) {
+      max-width: 100px;
+      margin-right: 15px;
+    }
+    @media  screen and (max-width: 380px) {
+      max-width: 80px;
+      margin-right: 10px;
+    }
+    @media  screen and (max-width: 350px) {
+      display: none;
+    }
   }
 
   &__menu {
     margin-right: 45px;
-    @media  screen and (max-width: 900px) {
+    @media  screen and (max-width: 960px) {
       display: none;
     }
     &-list {
@@ -35,46 +53,64 @@
       font-weight: 400;
       font-size: 18px;
       line-height: 17px;
+      cursor: pointer;
     }
   }
 
   &__info {
     margin-right: 60px;
+    font-size: 18px;
+
+    @media  screen and (max-width: 960px) {
+      margin-right: 15px;
+      font-size: 16px;
+      align-items: center;
+    }
+    @media  screen and (max-width: 500px) {
+      margin-right: 0;
+    }
   }
 
   &__address {
     &-title {
-      font-size: 18px;
       font-weight: bold;
-      line-height: 17px;
-
     }
 
     &-text {
       font-family: $gotham_pro_light;
-      font-size: 18px;
       font-weight: 300;
-      line-height: 17px;
-      margin-top: 15px;
+      margin-top: 10px;
+
+
+      @media  screen and (max-width: 960px) {
+        margin-top: 5px;
+      }
     }
   }
 
   &__contact {
     margin-top: 25px;
+    font-size: 18px;
+    @media  screen and (max-width: 960px) {
+      margin-right: 0;
+      font-size: 16px;
+    }
 
     &-title {
-      font-size: 18px;
       font-weight: bold;
       line-height: 17px;
       margin-bottom: 15px;
+      @media  screen and (max-width: 960px) {
+        margin-bottom: 5px;
+      }
     }
 
     &-text {
       padding-block: 2px;
       font-family: $gotham_pro_light;
-      font-size: 18px;
       font-weight: 300;
       line-height: 17px;
+
 
     }
   }
@@ -82,6 +118,12 @@
   &__form {
     display: flex;
     flex-direction: column;
+
+    @media screen and (max-width: 960px) {
+      margin-top: 40px;
+    }
+
+
 
     &-text {
       font-family: $gotham_pro_light;
@@ -95,6 +137,8 @@
       height: 40px;
       border-radius: 5px;
       padding: 10px 12px;
+      @media screen and (max-width: 960px) {
+      }
 
       &::placeholder {
         font-size: 16px;
@@ -108,3 +152,4 @@
     }
   }
 }
+

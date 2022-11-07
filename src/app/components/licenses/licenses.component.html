@@ -1,57 +1,15 @@
-<section class="licenses">
+<section id="licenses" class="licenses">
 
   <div class="container">
     <h1 class="title title-one section">ліцензії, дозволи та сертифікати</h1>
     <div class="licenses__inner">
-      <div class="licenses__item">
-        <a class="licenses__item-link" data-fancybox href="assets/img/licenses/lic-1.pdf">
+      <a class="licenses__item" *ngFor="let license of licenses" data-fancybox [href]="license.pdfLink">
+        <div class="licenses__item-text">{{license.text}}</div>
+        <a class="licenses__item-link" >
           <img class="licenses__item-img"
-               src="assets/img/licenses/lic-prev-1.jpg"
-               alt="lic-1"></a>
-      </div>
-      <div class="licenses__item">
-        <a class="licenses__item-link" data-fancybox href="assets/img/licenses/decl-1.pdf">
-          <img class="licenses__item-img"
-               src="assets/img/licenses/decl-prev-1.jpg"
-               alt=""></a>
-      </div>
-      <div class="licenses__item">
-        <a class="licenses__item-link" data-fancybox href="assets/img/licenses/decl-2.pdf">
-          <img class="licenses__item-img"
-               src="assets/img/licenses/decl-prev-2.jpg"
-               alt=""></a>
-      </div>
-      <div class="licenses__item">
-        <a class="licenses__item-link" data-fancybox href="assets/img/licenses/decl-3.pdf">
-          <img class="licenses__item-img"
-               src="assets/img/licenses/decl-prev-3.jpg"
-               alt=""></a>
-      </div>
-      <div class="licenses__item">
-        <a class="licenses__item-link" data-fancybox href="assets/img/licenses/dozvil-1.pdf">
-          <img class="licenses__item-img"
-               src="assets/img/licenses/dozvil-1.jpg"
-               alt="dozvil-1"></a>
-      </div>
-      <div class="licenses__item">
-        <a class="licenses__item-link" data-fancybox href="assets/img/licenses/dozvil-2.pdf">
-          <img class="licenses__item-img"
-               src="assets/img/licenses/dozvil-2.jpg"
-               alt="dozvil-2"></a>
-      </div>
-      <div class="licenses__item">
-        <a class="licenses__item-link" data-fancybox href="assets/img/licenses/dozvil-3.pdf">
-          <img class="licenses__item-img"
-               src="assets/img/licenses/dozvil-3.jpg"
-               alt="dozvil-3"></a>
-      </div>
-      <div class="licenses__item">
-        <a class="licenses__item-link" data-fancybox href="assets/img/licenses/dozvil-4.pdf">
-          <img class="licenses__item-img"
-               src="assets/img/licenses/dozvil-4.jpg"
-               alt="dozvil-4"></a>
-      </div>
-
+               [src]="license.img"
+               [alt]="license.text"></a>
+      </a>
     </div>
   </div>
 </section>

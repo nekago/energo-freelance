@@ -1,34 +1,31 @@
 <header class="header">
+  <video class="video" src="assets/img/bgbg.mp4" autoplay muted loop  *ngIf="!isMobile"></video>
   <div class="container">
+
     <div class="header__inner">
+
+
       <div class="logo">
         <img class="header__logo" src="assets/img/header-logo.svg" alt="logo">
       </div>
-      <nav class="menu">
-        <ul class="menu__list">
-          <li class="menu__list-item">
-            <a class="menu__list-link" href="">Про компанію</a>
-          </li>
-          <li class="menu__list-item">
-            <a class="menu__list-link" href="">Проекти</a>
-          </li>
-          <li class="menu__list-item">
-            <a class="menu__list-link" href="">Партнери</a>
-          </li>
-          <li class="menu__list-item">
-            <a class="menu__list-link" href="">Сертіфікати</a>
-          </li>
-          <li class="menu__list-item">
-            <a class="menu__list-link" href="">Контакти</a>
-          </li>
-        </ul>
-      </nav>
-      <button class="btn">
-        <a class="btn__link" href="#">Зв’язатися</a>
-      </button>
+      <!--    burger -->
+      <div class="header__burger" [class.open]="!burgerIsClose" (click)="burgerIsClose = !burgerIsClose">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ng-template [ngIf]="!isMobile">
+        <app-menu></app-menu>
+      </ng-template>
     </div>
 
+
+
     <div class="header__content">
+      <ng-template   [ngIf]="isMobile && !burgerIsClose">
+        <app-menu></app-menu>
+      </ng-template>
       <div class="header__content-logo">
         <img src="../../../assets/img/big-logo.svg" alt="logo">
       </div>

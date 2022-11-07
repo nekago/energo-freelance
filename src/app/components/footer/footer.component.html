@@ -5,19 +5,19 @@
       <nav class="footer__menu">
         <ul class="footer__menu-list">
           <li class="footer__menu-item">
-            <a class="footer__menu-link" href="">Про компанію</a>
+            <a class="footer__menu-link" (click)="scrollHandler('about-us')">Про компанію</a>
           </li>
           <li class="footer__menu-item">
-            <a class="footer__menu-link" href="">Проекти</a>
+            <a class="footer__menu-link"(click)="scrollHandler('services')">Проекти</a>
           </li>
           <li class="footer__menu-item">
-            <a class="footer__menu-link" href="">Партнери</a>
+            <a class="footer__menu-link" (click)="scrollHandler('partners')">Партнери</a>
           </li>
           <li class="footer__menu-item">
-            <a class="footer__menu-link" href="">Сертіфікати</a>
+            <a class="footer__menu-link" (click)="scrollHandler('licenses')">Сертіфікати</a>
           </li>
           <li class="footer__menu-item">
-            <a class="footer__menu-link" href="">Контакти</a>
+            <a class="footer__menu-link" (click)="scrollHandler('form')">Контакти</a>
           </li>
         </ul>
       </nav>
@@ -33,12 +33,12 @@
           <div class="footer__contact-text">bmy.euss@gmail.com</div>
         </div>
       </div>
-      <form class="footer__form">
+      <form id="form" action="mail-script.php" method="post" class="footer__form">
         <div class="footer__form-text">Є питання?</div>
         <div class="footer__form-text">Залиште свої контакти і ми з вами зв’яжемося</div>
-        <input class="footer__form-inp" type="text" placeholder="Пошта">
-        <input class="footer__form-inp" type="text" placeholder="Телефон">
-        <button class="btn footer__form-btn"><span class="btn__link">Відправити</span></button>
+        <input class="footer__form-inp" type="email" name="email" placeholder="Пошта" >
+        <input class="footer__form-inp" type="tel" name="telephone" placeholder="Телефон">
+        <button class="btn footer__form-btn" type="submit"><span class="btn__link">Відправити</span></button>
       </form>
     </div>
   </div>
