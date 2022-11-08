@@ -33,7 +33,7 @@
           <div class="footer__contact-text">bmy.euss@gmail.com</div>
         </div>
       </div>
-      <form id="form" action="mail-script.php" method="post" class="footer__form">
+      <form id="form" (submit)="sendMail($event)" class="footer__form">
         <div class="footer__form-text">Є питання?</div>
         <div class="footer__form-text">Залиште свої контакти і ми з вами зв’яжемося</div>
         <input class="footer__form-inp" type="email" name="email" placeholder="Пошта" >
@@ -42,4 +42,9 @@
       </form>
     </div>
   </div>
+  <div class="callback-modal" [class.visible]="showCallbackModal">
+    <p>Дякую! Ми зв'яжемося з Вами найближчим часом</p>
+  </div>
 </footer>
+
+

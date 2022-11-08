@@ -1,0 +1,64 @@
+@import 'src/assets/css/settings';
+.menu {
+
+  &__list {
+    width: 100%;
+    margin-right: 120px;
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 960px) {
+      margin-right: 60px;
+
+    }
+
+
+    &-item {
+      padding-inline: 20px;
+    }
+
+    &-link {
+      font-family: $gotham_pro_light;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 17px;
+      color: $white;
+      cursor: pointer;
+
+    }
+
+    &-btn {
+      @media screen and (max-width: 960px) {
+        margin-bottom: 10%;
+      }
+      @media screen and (max-width: 450px) {
+        margin-bottom: 20%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 960px) {
+    width: 100%;
+
+    margin-top: 60px;
+
+    &__list {
+      flex-direction: column;
+      margin-bottom: 20px;
+      &-item {
+        margin-top: 40px;
+      }
+      &-link {
+        font-size: 44px;
+      }
+    }
+  }
+  @media screen and (max-width: 960px) {
+    &__list {
+      &-link {
+        font-size: 30px;
+      }
+  }
+
+}
+}

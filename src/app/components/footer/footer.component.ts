@@ -1,5 +1,6 @@
-import {Component, Inject, OnInit} from '@angular/core';
+import {Component, Inject} from '@angular/core';
 import {DOCUMENT} from "@angular/common";
+import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-footer',
@@ -7,7 +8,11 @@ import {DOCUMENT} from "@angular/common";
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent  {
-  constructor(@Inject(DOCUMENT) private document: Document) {
+
+  showCallbackModal: boolean = false
+
+  constructor(@Inject(DOCUMENT) private document: Document, private http: HttpClient) {
+
   }
 
   scrollHandler(id: string) {
@@ -18,4 +23,18 @@ export class FooterComponent  {
   }
 
 
+  sendMail(e: any) {
+    e.preventDefault()
+    const mail = e.target[0].value
+    const phone = e.target[1].value
+    if (!mail || !phone) {
+      return
+    }
+    this.http.post("https://energo-callback.onrender.com", {mail, phone}).subscribe();
+    e.target.reset()
+    this.showCallbackModal = true
+    setTimeout(() => {
+      this.showCallbackModal = false
+    }, 1500)
+  }
 }
